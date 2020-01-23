@@ -1,0 +1,225 @@
+/**
+ * Project  : Serrure AAC
+ * Date     : 11/12/2019
+ * Autor    : CARDINAL Florian
+ * Nom      : main.css
+ * Location : /style/
+ */
+
+@font-face {
+	font-family: "ROCKET";
+	src: url('../fonts/ROCKET/ROCKET_WILDNESS.otf') format("otf"),
+		url('../fonts/ROCKET/ROCKET_WILDNESS.ttf') format("ttf"),
+		url('../fonts/ROCKET/ROCKET_WILDNESS.woff') format("woff");
+}
+
+:root {
+	--main-color: rgb(210, 210, 210);
+	--main-background: rgb(35, 35, 35) url('../assets/background.jpg');
+	--main-transparency: rgba(35, 35, 35, .85);
+
+	--box-bg: rgb(35, 35, 35);
+	--box-bd: 1px solid rgba(238, 238, 238, .1);
+	--box-peer: rgba(238, 238, 238, .1);
+	--box-radius: 5px;
+
+	--box-input-bg: rgba(0, 0, 0, .4);
+	--box-input-bd: rgba(0, 0, 0, .6);
+
+	--form-submit-bg: rgb(0, 0, 0);
+	--form-submit-hv: rgb(0, 136, 0);
+	--form-del: rgb(136, 0, 0);
+
+	--contrast-opacity: rgba(210, 210, 210, 1);
+	--contrast-transparent: rgba(210, 210, 210, 0);
+
+	--bg-nav: rgb(50, 50, 50);
+	--left-box-width: 280px;
+}
+
+* {
+	color: var(--main-color);
+	font-family: Lato, Ubuntu, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background: var(--main-background);
+	background-attachment: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+}
+
+.bg {
+	background: var(--main-transparency);
+	height: 100%;
+	position: fixed;
+	width: 100%;
+}
+
+nav {
+	background: var(--bg-nav);
+	box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+	height: 100%;
+	overflow: auto;
+	position: fixed;
+	width: var(--left-box-width);
+	z-index: 2;
+}
+
+nav ul .item { overflow: hidden; }
+
+nav ul a {
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+}
+
+nav ul .item .btn {
+	background: var(--bg-nav);
+	font-size: 20px;
+	padding: 16px 20px;
+	position: relative;
+	transition: .2s all;
+}
+nav ul .item .btn::before {
+	background: var(--bg-nav);
+	bottom: -7px;
+	content: '';
+	height: 14px;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%)rotate(45deg);
+	transition: .2s all;
+	width: 14px;
+}
+nav ul .item .btn:hover,
+nav ul .item .btn:hover:before { background: rgba(60, 60, 60); }
+
+nav ul .item span {
+	margin-right: 10px;
+	text-align: center;
+	width: 20px;
+}
+
+nav ul .item .right {
+	position: absolute;
+	right: .2em;
+}
+
+nav ul .item ul {
+	background: rgba(0, 0, 0, .3);
+	overflow: hidden;
+}
+
+nav ul .item ul a {
+	font-size: 16px;
+	padding: 16px 30px;
+	position: relative;
+}
+nav ul .item ul a::before,nav ul .item ul a::after {
+	background: currentColor;
+	bottom: 3px;
+	content: '';
+	height: auto;
+	left: 0;
+	position: absolute;
+	top: 3px;
+	transition: .2s all;
+	width: 0;
+}
+nav ul .item ul a:hover:before { width: 6px; }
+
+section {
+	bottom: 0;
+	left: var(--left-box-width);
+	overflow: auto;
+	padding: 1em;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}
+
+section h1 {
+	font-size: 50px;
+	font-weight: 200;
+}
+section h1::first-letter { text-transform: capitalize; }
+
+section table {
+	background: var(--box-bg);
+	border: var(--box-bd);
+	border-radius: var(--box-radius);
+	margin: 2em 0;
+	padding: 1em;
+	width: 100%;
+}
+
+section table th {
+	font-size: 1.25em;
+	font-weight: 300;
+	height: 1em;
+	padding: .25em .25em .75em .25em;
+	text-align: left;
+}
+section table th::first-letter { text-transform: capitalize; }
+section table td { padding: .25em; }
+section table .peer { background: var(--box-peer); }
+section table .nameArea { text-transform: uppercase; }
+section table .fnameArea { text-transform: capitalize;; }
+
+section article {
+	background: var(--box-bg);
+	border: var(--box-bd);
+	border-radius: var(--box-radius);
+	margin: 2em 0;
+	padding: 2em;
+}
+
+section #unlock article {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+section #unlock input[type='submit'] {
+	font-size: 2em;
+	height: auto;
+	padding: 1em;
+}
+
+footer {
+	border-top: 1px solid rgb(60, 60, 60);
+	bottom: 0;
+	font-size: .85em;
+	position: fixed;
+	width: var(--left-box-width);
+	z-index: 2;
+}
+
+footer ul {
+	list-style-type: none;
+	margin: 1em;
+}
+
+footer a, footer a:visited {
+	color: rgb(150, 150, 150);
+	display: block;
+	padding: .1em 0;
+	text-decoration: none;
+}
+
+/**
+ * END
+ */

@@ -1,0 +1,53 @@
+/**
+ * Project  : Serrure AAC
+ * Date     : 11/12/2019
+ * Autor    : CARDINAL Florian
+ * Nom      : form.css
+ * Location : /style/
+ */
+
+form .inputBox input {
+	background: var(--box-input-bg);
+	border: var(--box-input-bd);
+	border-radius: 5px;
+	box-sizing: border-box;
+	display: block;
+	font-size: 20px;
+	font-weight: 300;
+	height: 50px;
+	outline: none;
+	margin-bottom: 10px;
+	padding: 0 14px;
+	width: 100%;
+}
+
+form input[type=submit] {
+	background: var(--form-submit-bg);
+	border: 0;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 20px;
+	height: 50px;
+	margin: auto;
+	text-transform: capitalize;
+	transition: all .2s;
+	width: 100%;
+}
+
+form input[type=submit]:hover {
+	background: var(--form-submit-hv);
+	box-shadow: 0 0 15px var(--form-submit-hv);
+}
+
+form .info {
+	color: #CC3333;
+	display: none;
+	font-size: 1.15em;
+	font-weight: bold;
+	margin-top: 1em;
+	text-align: center;
+}
+
+/**
+ * END
+ */

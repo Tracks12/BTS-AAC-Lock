@@ -1,0 +1,32 @@
+/**
+ * Project  : Serrure AAC
+ * Date     : 11/12/2019
+ * Autor    : CARDINAL Florian
+ * Nom      : login.css
+ * Location : /style/
+ */
+
+.login {
+	background: var(--box-bg);
+	border: var(--box-bd);
+	border-radius: var(--box-radius);
+	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+	left: 50%;
+	padding: 3em;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 300px;
+	min-width: 240px;
+	width: 50%;
+}
+
+.login h1 {
+	margin-bottom: 50px;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+/**
+ * END
+ */
